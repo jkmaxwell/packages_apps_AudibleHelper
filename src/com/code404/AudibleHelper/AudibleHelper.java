@@ -1,4 +1,4 @@
-package com.code404.SoundcloudHelper;
+package com.code404.AudibleHelper;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
@@ -10,7 +10,7 @@ import android.view.MenuItem;
 
 import java.lang.Override;
 
-public class SoundcloudHelper extends Activity {
+public class AudibleHelper extends Activity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -22,7 +22,7 @@ public class SoundcloudHelper extends Activity {
 
         super.onResume();
         PackageManager pm = getPackageManager();
-        Intent launch = pm.getLaunchIntentForPackage("com.soundcloud.android");
+        Intent launch = pm.getLaunchIntentForPackage("com.audible.application");
         if (launch != null) {
             try {
                 startActivity(launch);
